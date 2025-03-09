@@ -86,9 +86,4 @@
     //cuando se usa submit
     form.addEventListener('submit', validateForm);
 
-    // Función para volver arriba con animación suave
-    let btn = document.getElementById("btn-top");
-    function topFunction() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
 })();

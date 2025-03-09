@@ -192,3 +192,16 @@ footer {
     padding: 10px;
 }
 
+button{
+    position: fixed;
+    bottom: 0%;
+    right: 20px;
+    margin: 0% auto;
+    /*padding: 10px 15px;*/
+    font-size: 35px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
