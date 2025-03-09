@@ -1,0 +1,59 @@
+<footer>
+    <div class="footer-container">
+        <p>🧦 Happy Socks - ¡Dale color a cada paso! 🌈✨</p>
+        <p>📍 Calle de la Felicidad #123, Ciudad de los Calcetines</p>
+        <p>📧 contacto@happysocks.com | 📞 +52 555-123-4567</p>
+        <p>💛 Síguenos en nuestras redes sociales:</p>
+        <div class="social-icons">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+        </div>
+        <button onclick="topFunction()" id="btn-top">⬆️ Volver Arriba</button>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background: linear-gradient(to right, #ffcc00, #ff6699);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+    }
+    
+    .footer-container {
+        max-width: 800px;
+        margin: auto;
+    }
+    
+    .social-icons img {
+        width: 30px;
+        margin: 0 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .social-icons img:hover {
+        transform: scale(1.2);
+    }
+    
+    #btn-top {
+        background: #ff3366;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+    
+    #btn-top:hover {
+        background: #ff0033;
+    }
+</style>
+
+<script>
+    function topFunction() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>

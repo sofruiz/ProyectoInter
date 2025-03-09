@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/about.css">
+        <link rel="icon" href="img/logo happy.png">
+        <script src="../js/pagweb.js"></script>
+        <title>Equipo Happy Socks</title>
+    </head>
+
+    <nav>
+        <div class="nav-container">
+            <div class="sock-logo">
+                <img src="img/logo happy.png" alt="Logo">
+            </div>
+            <div class="nav-title">
+                <h1>Happy Socks</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="pagweb.html">Inicio</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <body>
+
+    <!-- Index Section -->
+    <div class="index-container">
+        <h2>La mente detrás de la IDEA</h2>
+        <div class="treefeet">
+            <img src="img/3feet.png" alt="Feet">
+        </div>
+        <div class="button-group">
+            <a id= "berny" href="#berny" onclick="showSection('berny')">Bernardo Ruiz</a>
+            <a href="#ana" onclick="showSection('ana')">Ana Sofía Ruiz</a>
+            <a href="#javi" onclick="showSection('javi')">Javier Mejía</a>
+        </div>
+    </div>
+
+    <!--  Section -->
+    <div class="integrante-section" id="berny-section">
+        <img src="img/berny.png" alt="Bernardo Ruiz">
+        <h2>Bernardo Ruiz</h2>
+        <p>ID: </p>
+        
+    </div>
+
+    <!-- Ana Section -->
+    <div class="integrante-section" id="ana-section">
+        <img src="img/ana.png" alt="Ana Ruiz">
+        <h2>Ana Sofía Ruiz</h2>
+        <p>ID: 00485692</p>
+    </div>
+
+    <!--  Section -->
+    <div class="integrante-section" id="javi-section">
+        <img src="img/javi.png" alt="Javier Mejía">
+        <h2>Javier Mejía</h2>
+        <p>ID: 00</p>
+    </div>
+
+    <script>
+        // Function to show the selected section
+        function showSection(id) {
+            // Hide all sections
+            document.querySelectorAll('.integrante-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(id + '-section').style.display = 'block';
+        }
+    </script>  
+    <footer>"Dibuja sonrisas, pinta alegría y deja huella en el mundo, una piedra a la vez."</footer>
+
+    </body>
+</html>
