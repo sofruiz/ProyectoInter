@@ -201,8 +201,18 @@ h2 {
 
 .integrante-section p {
     font-size: 1.2rem;
+    color: #1d1d1b;
 }
 
+h5{
+    color: #db3dff; 
+    text-align: left;
+}
+
+h6{
+    color: #1d1d1b;
+    text-align: justify; 
+}
 
 /* footer con estilo 
 footer {

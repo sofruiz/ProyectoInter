@@ -11,7 +11,7 @@
 /* Aplica fuentes y colores generales para el cuerpo del documento. */
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, #ffcc00, #ff6699);
+    background: linear-gradient(to right, #ffe43d, #db3dff);
     /*background: url('img/backtry.png') no-repeat center center fixed;*/
     background-size: cover;
     color: #ffffff;
@@ -172,7 +172,6 @@ form {
     margin: 5px 0;
 }
 
-
 /* sidebar */
 aside {
     float: right;
@@ -180,6 +179,7 @@ aside {
     background: #ff00d9;
     padding: 20px;
     border-radius: 5px;
+    color: #1d1d1b;
 }
 
 aside h3 {
@@ -193,11 +193,13 @@ aside p {
 /* enlace url boton*/
 aside a {
     display: inline-block;
+    width: 100%;
     padding: 8px 12px;
-    background: #00d5ff;
-    color: #fff;
-    text-decoration: none;
+    background: #ffe43d;
+    color: #1d1d1b;
     border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
 }
 
 
@@ -231,5 +233,4 @@ button{
     color: white;
     border: none;
     border-radius: 10px;
-    align-content: center;
 }
