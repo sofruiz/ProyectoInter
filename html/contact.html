@@ -46,56 +46,33 @@
                     <section class="formulario-container">
                         <h3><i><h4>🌟 Dinos quién eres:</h4></i></h3>
                         <p>Déjanos tus datos y pronto recibirás un mensaje lleno de colores, buena vibra y calcetines mágicos. 🌈🦶✨</p>
-                        <form id="miFormulario">
-                            <!-- Nombre -->
-                            <label for="nombre">👤Nombre:</label>
-                            <input type="text" id="nombre" placeholder="¡Tu identidad mágica aquí!">
-                            <span class="error" id="errorNombre"></span>
-
-                            <br>
-                            <!-- Correo Electrónico -->
-                            <label for="email">📧Correo Electrónico:</label>
-                            <input type="email" id="email" placeholder="happy@mail.com">
-                            <span class="error" id="errorEmail"></span>
-                            
-                            <br>
-                            <!-- Contraseña -->
-                            <label for="password">🔒Password:</label>
-                            <input type="password" id="password" placeholder="(Solo para asegurar que nadie se robe tus calcetines)">
-                            <span class="error" id="errorPassword"></span>
-                            
-                            <br>
-                            <!--ejemplo de uso de selecciones-->
-                            <!-- Tribu -->
-                            <label for="Tribu">👣¿A qué tribu de calcetines perteneces?</label>
-                            <select name="Tribu" id="Departamento">
-                                <option value="Pintapiedras">Rayados Salvajes🦓</option>
-                                <option value="Mensajeros">Polka Dots Crew🔴🟡</option>
-                                <option value="Aventureros ">Suaves y Peluditos🐑</option>
-                            </select>
-                            <span class="error" id="errorTribu"></span>
-
-                            <br>
-                            <!--ejemplo de uso de radio-->
-                            <label for="pregunta">🌞 Hoy es un buen día?</label>
-                            <input type="radio" name="respuesta" value="si" id="si">
-                            <label for="si">Si</label>
-                            <input type="radio" name="respuesta" value="no" id="no">
-                            <label for="no">¡Por supuesto!</label>
-                            <span class="error" id="errorRadio"></span>
-
-                            <br>
-                            <!--ejemplo de uso de num-->
-                            <label for="sabiduria">🔮 ¿Cuántos secretos calcetineros conoces?</label>
-                            <input type="number" id="sabiduria" name="sabiduria" min="0" max="100" placeholder="0 al 100">
-                            <span class="error" id="errorSabiduria"></span>
-
-                            <br>
-                            <h5>📩 Click en enviar y prepárate para llenar tus pasos de alegría.</h5>
-                            <!-- Botón de Envío -->
-                            <button type="submit" class="btn-enviar">Enviar</button>
-
-                        </form>
+                        <div class="form-container">
+                            <form id="formulario">
+                                <label for="nombre">👤Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" class="input-text">
+                                <span class="error" id="error-nombre"></span>
+            
+                                <label for="email">📧Correo Electrónico:</label>
+                                <input type="email" id="email" name="email" placeholder="Escribe tu correo" class="input-text">
+                                <span class="error" id="error-email"></span>
+            
+                                <label for="edad">🔢Edad:</label>
+                                <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad" class="input-text">
+                                <span class="error" id="error-edad"></span>
+            
+                                <label for="telefono">📞Teléfono:</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu teléfono"
+                                    class="input-text">
+                                <span class="error" id="error-telefono"></span>
+            
+                                <label for="comentario">🗨️Comentarios:</label>
+                                <textarea id="comentario" name="comentario" rows="4" cols="50"
+                                    placeholder="¡Exprésanos tu opinión sobre nosotros!💝" class="textarea"></textarea>
+                                <span class="error" id="error-comentario"></span>
+            
+                                <button type="submit" class="boton">Enviar</button>
+                            </form>
+                        </div>
                     </section>
                             
 

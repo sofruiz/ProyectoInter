@@ -221,6 +221,20 @@ footer {
     background: #ff0033;
 }
 
+#boton {
+    background: #ff3366;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#boton:hover {
+    background: #ff0033;
+}
+
 button{
     /*position: fixed;*/
     bottom: 0%;
@@ -233,4 +247,52 @@ button{
     color: white;
     border: none;
     border-radius: 10px;
+}
+/*NUEVO*/
+/* Estilos para el contenedor del formulario */
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Estilos para el formulario */
+.form-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.input-text, .textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.boton {
+    background: #800080 center;
+    right: 20px;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.boton:hover {
+    background: #df04df;
+}
+
+/* Estilos para los mensajes de error */
+.error {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
 }

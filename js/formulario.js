@@ -1,89 +1,68 @@
-(function(){
-    // obtener elementos
-    var form = document.getElementById('miFormulario'),
-        nombre = document.getElementById('nombre'),
-        email = document.getElementById('email'),
-        password = document.getElementById('password'),
-        respuesta = document.getElementsByName('respuesta'),
-        sabiduria = document.getElementById('sabiduria'),
-        
-        // obtener error
-        errorNombre = document.getElementById('errorNombre'),
-        errorEmail = document.getElementById('errorEmail'),
-        errorPassword = document.getElementById('errorPassword'),
-        errorRadio = document.getElementById('errorRadio'),
-        errorSabiduria = document.getElementById('errorSabiduria');
+document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.getElementById("formulario");
 
-    // validar el nombre
-    function validateNombre(e) {
-        if(nombre.value.trim() === ''){
-            errorNombre.textContent = "   Por favor, ingresa tu nombre.";
-            console.log("Nombre no ingresado");
-            e.preventDefault();
-        }
-    }
-    //  validar el email
-    function validateEmail(e) {
-        if(email.value.trim() === ''){
-            errorEmail.textContent = "   Por favor, ingresa tu correo electrónico.";
-            console.log("Correo no ingresado");
-            e.preventDefault();
-        }
-    }
-    // validar la contraseña
-    function validatePassword(e) {
-        if(password.value.trim() === ''){
-            errorPassword.textContent = "   Por favor, ingresa tu contraseña.";
-            console.log("Contraseña no ingresada");
-            e.preventDefault();
-        }
-    }
-    //validar radio
-    function validateRespuesta(e) {
-        var selected = false;
-        for(var i = 0; i < respuesta.length; i++){
-            if(respuesta[i].checked){
-                selected = true;
-                break;
-            }
-        }
-        if(!selected){
-            errorRadio.textContent = "   Por favor, responde si hoy es un buen día.";
-            console.log("Respuesta no seleccionada");
-            e.preventDefault();
-        }
-    }
+    formulario.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe sin validar
+        validarFormulario();
+    });
 
-    // validar numeros
-    function validateSabiduria(e) {
-        if(sabiduria.value.trim() === ''){
-            errorSabiduria.textContent = "   Por favor, ingresa un valor para la sabiduría.";
-            console.log("Sabiduría no ingresada");
-            e.preventDefault();
-        } else {
-            var valor = parseInt(sabiduria.value, 10);
-            if(isNaN(valor) || valor < 0 || valor > 100){
-                errorSabiduria.textContent = "El número debe estar entre 0 y 100.";
-                console.log("Valor de sabiduría inválido");
-                e.preventDefault();
-            }
+    function validarFormulario() {
+        let nombre = document.getElementById("nombre").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let edad = document.getElementById("edad").value.trim();
+        let telefono = document.getElementById("telefono").value.trim();
+        let comentario = document.getElementById("comentario").value.trim();
+
+        // Borrar mensajes de error previos
+        limpiarErrores();
+
+        let errores = false;
+
+        // Validar nombre
+        if (nombre === "") {
+            mostrarError("error-nombre", "El nombre no puede estar vacío.");
+            errores = true;
+        }
+
+        // Validar email
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            mostrarError("error-email", "Introduce un correo electrónico válido.");
+            errores = true;
+        }
+
+        // Validar edad
+        if (edad === "" || isNaN(edad) || edad < 1) {
+            mostrarError("error-edad", "Ingresa una edad válida.");
+            errores = true;
+        }
+
+        // Validar teléfono (mínimo 8 dígitos)
+        let telefonoRegex = /^[0-9]{8,}$/;
+        if (!telefonoRegex.test(telefono)) {
+            mostrarError("error-telefono", "El teléfono debe tener al menos 8 dígitos numéricos.");
+            errores = true;
+        }
+
+        // Validar comentario
+        if (comentario.length < 10) {
+            mostrarError("error-comentario", "El comentario debe tener al menos 10 caracteres.");
+            errores = true;
+        }
+
+        // Si no hay errores, enviar el formulario
+        if (!errores) {
+            alert("Formulario enviado correctamente.");
+            formulario.submit();
         }
     }
 
-
-
-    //funcion check 
-    function validateForm(e) {
-
-        // cada validacion
-        validateNombre(e);
-        validateEmail(e);
-        validatePassword(e);
-        validateRespuesta(e);
-        validateSabiduria(e);
+    function mostrarError(id, mensaje) {
+        document.getElementById(id).textContent = mensaje;
     }
 
-    //cuando se usa submit
-    form.addEventListener('submit', validateForm);
-
-})();
+    function limpiarErrores() {
+        let errores = document.querySelectorAll(".error");
+        errores.forEach(error => error.textContent = "");
+    }
+});
