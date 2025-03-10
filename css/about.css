@@ -236,7 +236,7 @@ footer {
     padding: 10px;
 }
 
-button{
+.btn-top{
     position: fixed;
     bottom: 0%;
     right: 20px;

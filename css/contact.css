@@ -121,7 +121,9 @@ header {
 
 /* contenedor */
 
-.contenedor {
+.contenedor1 {
+    display: flex;
+    align-items:  stretch;
     margin: 5% auto;
     width: 90%;
     overflow: hidden;
@@ -130,10 +132,20 @@ header {
     border-radius: 30px;
 }
 
+.contenedor2 {
+    margin: 5% auto;
+    width: 90%;
+    overflow: hidden;
+    padding: 20px;
+    background: #db3dff;
+    border-radius: 30px;
+}
+
 /* main */
 .main {
+    flex: 1;
     float: left;
-    width: 65%;
+    width: 100%;
     padding-right: 20px;
 }
 
@@ -154,6 +166,7 @@ form {
 
 /* sidebar */
 aside {
+    flex: 1;
     float: right;
     width: 30%;
     background: #ffe43d;
@@ -192,7 +205,7 @@ footer {
     padding: 10px;
 }
 
-button{
+.btn-top{
     position: fixed;
     bottom: 0%;
     right: 20px;
@@ -204,4 +217,24 @@ button{
     color: white;
     border: none;
     border-radius: 10px;
+}
+
+.formulario-container{
+    padding: 8px 12px;
+    background: #d2d2d2;
+    color: #1d1d1b;
+    text-decoration: none;
+    border-radius: 3px;
+    text-align: justify;
+}
+
+.btn-enviar{
+    display: inline-block;
+    width: 100%;
+    padding: 8px 10px;
+    background: #ff00d9;
+    color: #ffffff;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
 }

@@ -151,6 +151,15 @@ header {
     border-radius: 30px;
 }
 
+.contenedor-fecha_hora {
+    align-content: center;
+    width: 50%;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    color: #1d1d1b;
+}
+
 /* main */
 .main {
     float: left;
@@ -221,7 +230,7 @@ footer {
     padding: 10px;
 }
 
-button{
+.btn-top{
     position: fixed;
     bottom: 0%;
     right: 20px;
@@ -233,4 +242,14 @@ button{
     color: white;
     border: none;
     border-radius: 10px;
+}
+
+#clock {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1d1d1b;
+    text-align: center;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
 }
