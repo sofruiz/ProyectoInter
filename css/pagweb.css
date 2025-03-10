@@ -211,47 +211,18 @@ aside a {
 
 /* footer con estilo */
 footer {
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(to right, #ffcc00, #ff6699);
+    background: #35424a; /* Color de fondo */
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
-}
-
-.footer-container {
-    max-width: 800px;
-    margin: auto;
-}
-
-.social-icons img {
-    width: 30px;
-    margin: 0 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.social-icons img:hover {
-    transform: scale(1.2);
-}
-
-#btn-top {
-    background: #ff3366;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-#btn-top:hover {
-    background: #ff0033;
+    padding: 10px;
 }
 
 button{
-    /*position: fixed;*/
+    position: fixed;
     bottom: 0%;
     right: 20px;
     margin: 0% auto;
