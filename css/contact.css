@@ -192,19 +192,6 @@ aside a {
     border-radius: 3px;
 }
 
-
-/* footer con estilo */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #35424a; /* Color de fondo */
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
 .btn-top{
     position: fixed;
     bottom: 0%;
@@ -237,4 +224,44 @@ footer {
     border-radius: 3px;
     text-align: center;
     text-decoration: none;
+}
+
+/* Footer contenedor */
+.footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 50px; /* Espacio para el footer fijo */
+}
+
+/* Footer estático */
+.footer-static {
+    background: #35424a;
+    color: #ffe43d;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Footer fijo */
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #35424a;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
 }
